@@ -13,9 +13,13 @@
 		AC497B23259A9C5F00D4BF81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC497B22259A9C5F00D4BF81 /* Preview Assets.xcassets */; };
 		AC497B2E259A9C5F00D4BF81 /* AtomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC497B2D259A9C5F00D4BF81 /* AtomTests.swift */; };
 		AC497B39259A9C5F00D4BF81 /* AtomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC497B38259A9C5F00D4BF81 /* AtomUITests.swift */; };
-		AC84ED9B25AD3B1400230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84ED9525AD37B500230761 /* Font Awesome 5 Brands-Regular-400.otf */; };
-		AC84ED9F25AD3B1600230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84ED9725AD37B500230761 /* Font Awesome 5 Free-Regular-400.otf */; };
-		AC84EDA025AD3B1800230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84ED9625AD37B500230761 /* Font Awesome 5 Free-Solid-900.otf */; };
+		AC84EDAE25AD52E800230761 /* MoviesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDAD25AD52E800230761 /* MoviesHeader.swift */; };
+		AC84EDB325AD531E00230761 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDB225AD531E00230761 /* MoviesList.swift */; };
+		AC84EDB825AD535E00230761 /* MoviesListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDB725AD535E00230761 /* MoviesListItem.swift */; };
+		AC84EDC325AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDC025AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf */; };
+		AC84EDC425AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDC125AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf */; };
+		AC84EDC525AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDC225AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		AC84EDCA25AD558000230761 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDC925AD558000230761 /* SearchButton.swift */; };
 		ACF4B8E4259D01B9005AAB05 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8E3259D01B9005AAB05 /* Movies.swift */; };
 		ACF4B8E9259D01C6005AAB05 /* Theaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8E8259D01C6005AAB05 /* Theaters.swift */; };
 		ACF4B8EE259D01D0005AAB05 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8ED259D01D0005AAB05 /* Profile.swift */; };
@@ -54,9 +58,13 @@
 		AC497B34259A9C5F00D4BF81 /* AtomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC497B38259A9C5F00D4BF81 /* AtomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomUITests.swift; sourceTree = "<group>"; };
 		AC497B3A259A9C5F00D4BF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC84ED9525AD37B500230761 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
-		AC84ED9625AD37B500230761 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
-		AC84ED9725AD37B500230761 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		AC84EDAD25AD52E800230761 /* MoviesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesHeader.swift; sourceTree = "<group>"; };
+		AC84EDB225AD531E00230761 /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
+		AC84EDB725AD535E00230761 /* MoviesListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListItem.swift; sourceTree = "<group>"; };
+		AC84EDC025AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		AC84EDC125AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
+		AC84EDC225AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		AC84EDC925AD558000230761 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		ACF4B8E3259D01B9005AAB05 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		ACF4B8E8259D01C6005AAB05 /* Theaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaters.swift; sourceTree = "<group>"; };
 		ACF4B8ED259D01D0005AAB05 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -118,7 +126,7 @@
 				AC497B1D259A9C5E00D4BF81 /* MainView.swift */,
 				AC497B1F259A9C5F00D4BF81 /* Assets.xcassets */,
 				ACF4B90B259D03E6005AAB05 /* Data */,
-				AC84ED9425AD379600230761 /* Fonts */,
+				AC84EDBF25AD53BE00230761 /* Fonts */,
 				AC497B21259A9C5F00D4BF81 /* Preview Content */,
 				ACF4B8FC259D026B005AAB05 /* Screens */,
 			);
@@ -151,24 +159,76 @@
 			path = AtomUITests;
 			sourceTree = "<group>";
 		};
-		AC84ED9425AD379600230761 /* Fonts */ = {
+		AC84EDA725AD52A700230761 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				AC84ED9525AD37B500230761 /* Font Awesome 5 Brands-Regular-400.otf */,
-				AC84ED9725AD37B500230761 /* Font Awesome 5 Free-Regular-400.otf */,
-				AC84ED9625AD37B500230761 /* Font Awesome 5 Free-Solid-900.otf */,
+				AC84EDAC25AD52D500230761 /* Supporting Views */,
+				ACF4B8E3259D01B9005AAB05 /* Movies.swift */,
 			);
-			name = Fonts;
+			name = Movies;
+			sourceTree = "<group>";
+		};
+		AC84EDA825AD52B000230761 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4B8F2259D01E2005AAB05 /* News.swift */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		AC84EDA925AD52B700230761 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4B8ED259D01D0005AAB05 /* Profile.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		AC84EDAA25AD52BB00230761 /* Theaters */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4B8E8259D01C6005AAB05 /* Theaters.swift */,
+			);
+			name = Theaters;
+			sourceTree = "<group>";
+		};
+		AC84EDAB25AD52BF00230761 /* Trailers */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4B8F7259D01EA005AAB05 /* Trailers.swift */,
+			);
+			name = Trailers;
+			sourceTree = "<group>";
+		};
+		AC84EDAC25AD52D500230761 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC84EDAD25AD52E800230761 /* MoviesHeader.swift */,
+				AC84EDB225AD531E00230761 /* MoviesList.swift */,
+				AC84EDB725AD535E00230761 /* MoviesListItem.swift */,
+				AC84EDC925AD558000230761 /* SearchButton.swift */,
+			);
+			name = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		AC84EDBF25AD53BE00230761 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC84EDC225AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf */,
+				AC84EDC025AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf */,
+				AC84EDC125AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		ACF4B8FC259D026B005AAB05 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				ACF4B8E3259D01B9005AAB05 /* Movies.swift */,
-				ACF4B8F2259D01E2005AAB05 /* News.swift */,
-				ACF4B8ED259D01D0005AAB05 /* Profile.swift */,
-				ACF4B8E8259D01C6005AAB05 /* Theaters.swift */,
-				ACF4B8F7259D01EA005AAB05 /* Trailers.swift */,
+				AC84EDA725AD52A700230761 /* Movies */,
+				AC84EDA825AD52B000230761 /* News */,
+				AC84EDA925AD52B700230761 /* Profile */,
+				AC84EDAA25AD52BB00230761 /* Theaters */,
+				AC84EDAB25AD52BF00230761 /* Trailers */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -285,11 +345,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC497B23259A9C5F00D4BF81 /* Preview Assets.xcassets in Resources */,
+				AC84EDC525AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				AC84EDC325AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				AC497B20259A9C5F00D4BF81 /* Assets.xcassets in Resources */,
 				ACF4B907259D03E0005AAB05 /* upcoming_movies.json in Resources */,
-				AC84EDA025AD3B1800230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
-				AC84ED9B25AD3B1400230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
-				AC84ED9F25AD3B1600230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
+				AC84EDC425AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,12 +375,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF4B8F3259D01E2005AAB05 /* News.swift in Sources */,
+				AC84EDAE25AD52E800230761 /* MoviesHeader.swift in Sources */,
 				AC497B1E259A9C5E00D4BF81 /* MainView.swift in Sources */,
 				ACF4B8EE259D01D0005AAB05 /* Profile.swift in Sources */,
 				ACF4B8E9259D01C6005AAB05 /* Theaters.swift in Sources */,
 				AC497B1C259A9C5E00D4BF81 /* AtomApp.swift in Sources */,
 				ACF4B8F8259D01EA005AAB05 /* Trailers.swift in Sources */,
 				ACF4B8E4259D01B9005AAB05 /* Movies.swift in Sources */,
+				AC84EDB325AD531E00230761 /* MoviesList.swift in Sources */,
+				AC84EDCA25AD558000230761 /* SearchButton.swift in Sources */,
+				AC84EDB825AD535E00230761 /* MoviesListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
