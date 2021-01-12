@@ -16,16 +16,17 @@
 		AC84EDAE25AD52E800230761 /* MoviesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDAD25AD52E800230761 /* MoviesHeader.swift */; };
 		AC84EDB325AD531E00230761 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDB225AD531E00230761 /* MoviesList.swift */; };
 		AC84EDB825AD535E00230761 /* MoviesListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDB725AD535E00230761 /* MoviesListItem.swift */; };
-		AC84EDC325AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDC025AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf */; };
-		AC84EDC425AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDC125AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf */; };
-		AC84EDC525AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDC225AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf */; };
 		AC84EDCA25AD558000230761 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDC925AD558000230761 /* SearchButton.swift */; };
+		AC84EDD925AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDD625AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf */; };
+		AC84EDDA25AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDD725AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf */; };
+		AC84EDDB25AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDD825AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf */; };
+		AC84EDE025AD62AC00230761 /* upcoming_movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDDF25AD62AC00230761 /* upcoming_movies.json */; };
+		AC84EDF025AD92B400230761 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDEF25AD92B400230761 /* Movie.swift */; };
 		ACF4B8E4259D01B9005AAB05 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8E3259D01B9005AAB05 /* Movies.swift */; };
 		ACF4B8E9259D01C6005AAB05 /* Theaters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8E8259D01C6005AAB05 /* Theaters.swift */; };
 		ACF4B8EE259D01D0005AAB05 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8ED259D01D0005AAB05 /* Profile.swift */; };
 		ACF4B8F3259D01E2005AAB05 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8F2259D01E2005AAB05 /* News.swift */; };
 		ACF4B8F8259D01EA005AAB05 /* Trailers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B8F7259D01EA005AAB05 /* Trailers.swift */; };
-		ACF4B907259D03E0005AAB05 /* upcoming_movies.json in Resources */ = {isa = PBXBuildFile; fileRef = ACF4B906259D03E0005AAB05 /* upcoming_movies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,16 +62,17 @@
 		AC84EDAD25AD52E800230761 /* MoviesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesHeader.swift; sourceTree = "<group>"; };
 		AC84EDB225AD531E00230761 /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
 		AC84EDB725AD535E00230761 /* MoviesListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListItem.swift; sourceTree = "<group>"; };
-		AC84EDC025AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
-		AC84EDC125AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
-		AC84EDC225AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
 		AC84EDC925AD558000230761 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		AC84EDD625AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
+		AC84EDD725AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		AC84EDD825AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		AC84EDDF25AD62AC00230761 /* upcoming_movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = upcoming_movies.json; sourceTree = "<group>"; };
+		AC84EDEF25AD92B400230761 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		ACF4B8E3259D01B9005AAB05 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		ACF4B8E8259D01C6005AAB05 /* Theaters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theaters.swift; sourceTree = "<group>"; };
 		ACF4B8ED259D01D0005AAB05 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		ACF4B8F2259D01E2005AAB05 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		ACF4B8F7259D01EA005AAB05 /* Trailers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailers.swift; sourceTree = "<group>"; };
-		ACF4B906259D03E0005AAB05 /* upcoming_movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = upcoming_movies.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +123,11 @@
 		AC497B1A259A9C5E00D4BF81 /* Atom */ = {
 			isa = PBXGroup;
 			children = (
+				AC84EDEE25AD928C00230761 /* Model */,
 				AC497B24259A9C5F00D4BF81 /* Info.plist */,
-				AC497B1B259A9C5E00D4BF81 /* AtomApp.swift */,
-				AC497B1D259A9C5E00D4BF81 /* MainView.swift */,
-				AC497B1F259A9C5F00D4BF81 /* Assets.xcassets */,
-				ACF4B90B259D03E6005AAB05 /* Data */,
-				AC84EDBF25AD53BE00230761 /* Fonts */,
+				AC84EDEA25AD649100230761 /* Application */,
+				AC84EDD425AD626F00230761 /* Data */,
+				AC84EDD525AD627400230761 /* Fonts */,
 				AC497B21259A9C5F00D4BF81 /* Preview Content */,
 				ACF4B8FC259D026B005AAB05 /* Screens */,
 			);
@@ -211,19 +212,45 @@
 			name = "Supporting Views";
 			sourceTree = "<group>";
 		};
-		AC84EDBF25AD53BE00230761 /* Fonts */ = {
+		AC84EDD425AD626F00230761 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				AC84EDC225AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf */,
-				AC84EDC025AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf */,
-				AC84EDC125AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf */,
+				AC84EDDF25AD62AC00230761 /* upcoming_movies.json */,
 			);
-			path = Fonts;
+			name = Data;
+			sourceTree = "<group>";
+		};
+		AC84EDD525AD627400230761 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC84EDD825AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf */,
+				AC84EDD725AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf */,
+				AC84EDD625AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		AC84EDEA25AD649100230761 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AC497B1B259A9C5E00D4BF81 /* AtomApp.swift */,
+				AC497B1F259A9C5F00D4BF81 /* Assets.xcassets */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		AC84EDEE25AD928C00230761 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC84EDEF25AD92B400230761 /* Movie.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		ACF4B8FC259D026B005AAB05 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				AC497B1D259A9C5E00D4BF81 /* MainView.swift */,
 				AC84EDA725AD52A700230761 /* Movies */,
 				AC84EDA825AD52B000230761 /* News */,
 				AC84EDA925AD52B700230761 /* Profile */,
@@ -231,14 +258,6 @@
 				AC84EDAB25AD52BF00230761 /* Trailers */,
 			);
 			name = Screens;
-			sourceTree = "<group>";
-		};
-		ACF4B90B259D03E6005AAB05 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				ACF4B906259D03E0005AAB05 /* upcoming_movies.json */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,12 +363,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC84EDDB25AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				AC84EDD925AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
+				AC84EDE025AD62AC00230761 /* upcoming_movies.json in Resources */,
+				AC84EDDA25AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				AC497B23259A9C5F00D4BF81 /* Preview Assets.xcassets in Resources */,
-				AC84EDC525AD53DF00230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
-				AC84EDC325AD53DF00230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				AC497B20259A9C5F00D4BF81 /* Assets.xcassets in Resources */,
-				ACF4B907259D03E0005AAB05 /* upcoming_movies.json in Resources */,
-				AC84EDC425AD53DF00230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +395,7 @@
 			files = (
 				ACF4B8F3259D01E2005AAB05 /* News.swift in Sources */,
 				AC84EDAE25AD52E800230761 /* MoviesHeader.swift in Sources */,
+				AC84EDF025AD92B400230761 /* Movie.swift in Sources */,
 				AC497B1E259A9C5E00D4BF81 /* MainView.swift in Sources */,
 				ACF4B8EE259D01D0005AAB05 /* Profile.swift in Sources */,
 				ACF4B8E9259D01C6005AAB05 /* Theaters.swift in Sources */,
