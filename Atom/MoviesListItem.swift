@@ -14,9 +14,7 @@ struct MoviesListItem: View {
         // Align Title and Rating to the left (in LTR languages)
         VStack(alignment: .leading) {
             // Image
-            Image("shadow_in_the_cloud.jpg")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            RemoteImage(url: movie.poster_full)
             // Name
             Text(movie.title)
                 .font(.system(size: 12))
