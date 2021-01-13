@@ -9,9 +9,7 @@ import SwiftUI
 
 struct RemoteImage: View {
     @StateObject var imageService : ImageService
-    
-    var url : String
-    
+    private var url : String
     private let defaultImage = UIImage(systemName: "photo")
     
     init(url: String) {
@@ -20,6 +18,7 @@ struct RemoteImage: View {
     }
     
     var body: some View {
+        // Displays network image or default placeholder
         Image(uiImage: (imageService.image ?? defaultImage)!)
             .resizable()
             .aspectRatio(contentMode: .fit)
