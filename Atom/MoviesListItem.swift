@@ -20,6 +20,7 @@ struct MoviesListItem: View {
             // Name
             Text(movie.title)
                 .font(.system(size: 12))
+                .lineLimit(1)
             // Movie Rating
             Text(movie.mpa_rating)
                 .font(.system(size: 12))
@@ -40,7 +41,7 @@ struct MoviesListItem_Previews: PreviewProvider {
         synopsis: "In the throes of World War II, on a rainy morning in Auckland, a group of Allied soldiers prepare to take to the air in a B-17 Flying Fortress. The all-male crew is caught off guard by Captain Maude Garrett boarding their plane carrying a top-secret package. The presence of a woman on a military flight is unusual enough to arouse their suspicion. Just as Maude's quick wit and military knowledge is winning over the leery crew, strange happenings and holes in her backstory lead to paranoia surrounding her true mission. But this crew isn't alone in the sky... lurking in the shadows, something with sharp teeth and a taste for chaos is tearing at the heart of the vessel. Crushed between an oncoming Japanese ambush and an evil lurking within, Maude must push her limits to save the hapless crew and to protect her mysterious cargo.",
         runtime: "1hr 23m",
         mpa_rating: "Rated R",
-        moving_rating: "",
+        movie_rating: "",
         metacritic_rating: ""
     )
     

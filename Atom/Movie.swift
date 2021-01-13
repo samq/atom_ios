@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie {
+struct Movie : Decodable {
     var title: String
     var directors: String
     var writers: String
@@ -19,6 +19,6 @@ struct Movie {
     var synopsis: String
     var runtime: String
     var mpa_rating: String
-    var moving_rating: String
+    var movie_rating: String
     var metacritic_rating: String
 }
