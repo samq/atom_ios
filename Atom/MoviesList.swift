@@ -16,7 +16,9 @@ struct MoviesList: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(moviesService.movies, id: \.title) { movie in
-                    MoviesListItem(movie: movie)
+                    NavigationLink(destination: MovieDetails(movie: movie)) {
+                        MoviesListItem(movie: movie)
+                    }
                 }
             }
         }

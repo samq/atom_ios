@@ -14,26 +14,29 @@ struct MainView: View {
     }
     
     var body: some View {
-        TabView {
-            Movies().tabItem {
-                Image(systemName: "film.fill")
-                Text("Movies")
-            }
-            Theaters().tabItem {
-                Image(systemName: "mappin.circle.fill")
-                Text("Theaters")
-            }
-            News().tabItem {
-                Image(systemName: "newspaper.fill")
-                Text("News")
-            }
-            Trailers().tabItem {
-                Image(systemName: "play.circle.fill")
-                Text("Trailers")
-            }
-            Profile().tabItem {
-                Image(systemName: "person.crop.circle.fill")
-                Text("Profile")
+        NavigationView {
+            TabView {
+                Movies().tabItem {
+                    Image(systemName: "film.fill")
+                    Text("Movies")
+                }
+                .navigationBarHidden(true)
+                Theaters().tabItem {
+                    Image(systemName: "mappin.circle.fill")
+                    Text("Theaters")
+                }
+                News().tabItem {
+                    Image(systemName: "newspaper.fill")
+                    Text("News")
+                }
+                Trailers().tabItem {
+                    Image(systemName: "play.circle.fill")
+                    Text("Trailers")
+                }
+                Profile().tabItem {
+                    Image(systemName: "person.crop.circle.fill")
+                    Text("Profile")
+                }
             }
         }
     }
