@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieDetails: View {
-    @State private var selectedSection = 0
+    @State private var selectedSection = 1
     
     var movie: Movie
     var sections = ["Showtimes", "Details", "Reviews"]
@@ -60,7 +60,7 @@ struct MovieDetails: View {
             Group {
                 switch(sections[selectedSection]) {
                     case "Showtimes": Showtimes()
-                    case "Details": Details()
+                    case "Details": Details(movie: movie)
                     default: Reviews()
                 }
             }
@@ -122,10 +122,94 @@ struct Showtimes: View {
 // Videos and Photos
 // Details - Release Date / Director / Producers / Writer / Runtime
 struct Details: View {
+    var movie: Movie
+    
     var body: some View {
-        Text("Details")
+        VStack {
+            // Synopsis
+            HStack {
+                Text("Synopsis")
+                Spacer()
+            }
+            Divider()
+            Text("\(movie.synopsis)")
+            
+            // Cast
+            HStack {
+                Text("Cast")
+                Spacer()
+                Text("View All")
+            }
+            .padding(.top)
+            Divider()
+            // Cast Members - 4
+            if(movie.cast.count > 4) {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
+                    ForEach(0 ..< 4) { index in
+                        CastCardView(name: movie.cast[index])
+                    }
+                }
+            }
+            
+            // Details
+            Group {
+                HStack {
+                    Text("Details")
+                    Spacer()
+                }
+                Divider()
+                // Release Date / Director / Producers / Writers / Runtime
+                HStack {
+                    Text("Release Date:")
+                    Text("\(movie.release_date)").lineLimit(1)
+                    Spacer()
+                }
+                HStack {
+                    Text("Director(s):")
+                    Text("\(movie.directors)").lineLimit(1)
+                    Spacer()
+                }
+                HStack {
+                    Text("Producer(s):")
+                    Text("\(movie.producers)").lineLimit(1)
+                    Spacer()
+                }
+                HStack {
+                    Text("Writer(s):")
+                    Text("\(movie.writers)").lineLimit(1)
+                    Spacer()
+                }
+                HStack {
+                    Text("Runtime:")
+                    Text("\(movie.runtime)")
+                    Spacer()
+                }
+            }
+            
+        }
+        .padding()
     }
 }
+
+struct CastCardView: View {
+    var name: String
+    
+    var body: some View {
+        VStack {
+            Image(systemName: "photo")
+                .resizable()
+                .font(.system(size: 256))
+            GeometryReader { geometry in
+                Text("\(name)")
+                    .frame(width: geometry.size.width, height: geometry.size.height / 3)
+                    .font(.subheadline)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+            }
+        }
+    }
+}
+
 
 // Reviews
 // Critic Reviews
