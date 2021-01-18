@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct MovieDetails: View {
-    @State private var selectedSection = 1
+    // Initial Picker - 0 (Showtimes)
+    @State private var selectedSection = 0
     
     var movie: Movie
-    var sections = ["Showtimes", "Details", "Reviews"]
+    // Sections Constants
+    private let sections = ["Showtimes", "Details", "Reviews"]
     
+    // UIColor (RGBA) - Atom Tickets Theme
     private let ATOM_BLUE = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1)
     
     init(movie: Movie) {
         self.movie = movie
+        
+        // Customizes Picker (SegmentedPickerStyle)
+        // Background Color / Selected Color / Foreground (Normal and Selected)
         UISegmentedControl.appearance().backgroundColor = .black
         UISegmentedControl.appearance().selectedSegmentTintColor = .black
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: ATOM_BLUE], for: .selected)
@@ -25,17 +31,7 @@ struct MovieDetails: View {
     
     var body: some View {
         ScrollView {
-            // NavigationView
-            // Back Arrow
-            // Movie Poster / Movie Title
-            // Share
-            // Bookmark
-            
-            // Trailer - Video
-            // Scrolling Effect
-            
-            // Movie Poster
-            // Movie Title, Rating, Runtime
+            // Information about Movie Poster / Title / Runtime
             HStack {
                 RemoteImage(url: movie.poster_full)
                     .frame(width: 146, height: 204)
@@ -47,16 +43,17 @@ struct MovieDetails: View {
             }
             .padding()
             
-            // Tabs - Showtimes / Details / Reviews
+            // Picker - Showtimes / Details / Reviews
             Picker("", selection: $selectedSection) {
                 ForEach(0 ..< sections.count) {
                     Text("\(sections[$0])")
                 }
             }
+            // SegmentedPickerStyle - "Tab"
             .pickerStyle(SegmentedPickerStyle())
             .padding()
             
-            // Show section that corresponds to one chosen in Picker
+            // Show section that corresponds to one chosen in Picker - Showtimes / Details / Reviews
             Group {
                 switch(sections[selectedSection]) {
                     case "Showtimes": Showtimes()
@@ -65,182 +62,9 @@ struct MovieDetails: View {
                 }
             }
         }
+        // Black Background with White Fonts
         .background(Color.black)
         .foregroundColor(Color.white)
-    }
-}
-
-// Showtimes
-// Date and Location
-// Format
-// Movie Theater Name / Favorite
-// Distance (Miles) / Theater Details - Name / Favorite / Distance / Address / Listings
-// Add to Watch List
-struct Showtimes: View {
-    @State private var date = "Today"
-    @State private var location = "Los Angeles"
-    @State private var format = "All Format"
-    
-    private let CALENDAR_IMAGE_NAME = "calendar"
-    private let LOCATION_IMAGE_NAME = "location"
-    private let FILM_IMAGE_NAME = "film"
-    
-    private let ATOM_BLUE = Color(red: 52/255.0, green: 152/255.0, blue: 219/255.0)
-    
-    var body: some View {
-        VStack {
-            HStack {
-                //
-                ImageButton(text: date, imageName: CALENDAR_IMAGE_NAME)
-                    .frame(maxWidth: .infinity)
-                //
-                ImageButton(text: location, imageName: LOCATION_IMAGE_NAME)
-                    .frame(maxWidth: .infinity)
-            }
-            //
-            ImageButton(text: format, imageName: FILM_IMAGE_NAME)
-                .frame(maxWidth: .infinity)
-            
-            Button(action: {}) {
-                Text("Add to My Watch List")
-                    .font(.subheadline)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(8)
-            .background(ATOM_BLUE)
-            .cornerRadius(8)
-        }
-        .padding()
-    }
-}
-
-// Details
-// Synopsis
-// Cast - Photo (Placeholder) and Name
-// View All (List)
-// Videos and Photos
-// Details - Release Date / Director / Producers / Writer / Runtime
-struct Details: View {
-    var movie: Movie
-    
-    var body: some View {
-        VStack {
-            // Synopsis
-            HStack {
-                Text("Synopsis")
-                Spacer()
-            }
-            Divider()
-            Text("\(movie.synopsis)")
-            
-            // Cast
-            HStack {
-                Text("Cast")
-                Spacer()
-                Text("View All")
-            }
-            .padding(.top)
-            Divider()
-            // Cast Members - 4
-            if(movie.cast.count > 4) {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
-                    ForEach(0 ..< 4) { index in
-                        CastCardView(name: movie.cast[index])
-                    }
-                }
-            }
-            
-            // Details
-            Group {
-                HStack {
-                    Text("Details")
-                    Spacer()
-                }
-                Divider()
-                // Release Date / Director / Producers / Writers / Runtime
-                HStack {
-                    Text("Release Date:")
-                    Text("\(movie.release_date)").lineLimit(1)
-                    Spacer()
-                }
-                HStack {
-                    Text("Director(s):")
-                    Text("\(movie.directors)").lineLimit(1)
-                    Spacer()
-                }
-                HStack {
-                    Text("Producer(s):")
-                    Text("\(movie.producers)").lineLimit(1)
-                    Spacer()
-                }
-                HStack {
-                    Text("Writer(s):")
-                    Text("\(movie.writers)").lineLimit(1)
-                    Spacer()
-                }
-                HStack {
-                    Text("Runtime:")
-                    Text("\(movie.runtime)")
-                    Spacer()
-                }
-            }
-            
-        }
-        .padding()
-    }
-}
-
-struct CastCardView: View {
-    var name: String
-    
-    var body: some View {
-        VStack {
-            Image(systemName: "photo")
-                .resizable()
-                .font(.system(size: 256))
-            GeometryReader { geometry in
-                Text("\(name)")
-                    .frame(width: geometry.size.width, height: geometry.size.height / 3)
-                    .font(.subheadline)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.center)
-            }
-        }
-    }
-}
-
-
-// Reviews
-// Critic Reviews
-// User Reviews
-// 5 / 4 / 3 / 2 / 1 Stars
-// Add Your Own Review - Button
-// List - Icon / Name / Rating / Comment / Verified Review Mark`
-struct Reviews: View {
-    private let ATOM_BLUE = Color(red: 52/255.0, green: 152/255.0, blue: 219/255.0)
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Text("User Reviews")
-                Spacer()
-            }
-            Divider()
-            Text("Looks like no one has reviewed this yet.")
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 64)
-                .border(Color.gray)
-            Button(action: {}) {
-                Text("Be the First to Leave a Review")
-                    .font(.subheadline)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            }
-            .padding(8)
-            .background(ATOM_BLUE)
-            .cornerRadius(8)
-        }
-        .padding()
     }
 }
 

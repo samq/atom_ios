@@ -7,15 +7,17 @@
 
 import SwiftUI
 
+// View of movie to be displayed in a list
+// Comprised of the Movie Poster, Title, and MPA Rating
 struct MoviesListItem: View {
     var movie: Movie
     
     var body: some View {
         // Align Title and Rating to the left (in LTR languages)
         VStack(alignment: .leading) {
-            // Image
+            // Image - Poster
             RemoteImage(url: movie.poster_full)
-            // Name
+            // Name - Title
             Text(movie.title)
                 .font(.system(size: 12))
                 .lineLimit(1)

@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+// RemoteImage
+// Displays an image stored on a network
 struct RemoteImage: View {
+    // ImageService - Provides the service for displaying network image
     @StateObject var imageService : ImageService
+    // Required URL to Image
     private var url : String
+    // Default Image to be displayed in case network resource unavailable
     private let defaultImage = UIImage(systemName: "photo")
     
+    // Initializer
     init(url: String) {
         self.url = url
         _imageService = StateObject(wrappedValue: ImageService(url: url))

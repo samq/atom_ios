@@ -7,14 +7,19 @@
 
 import SwiftUI
 
+// MainView for Atom Application
 struct MainView: View {
     
     init() {
+        // Adjust TabView color
         UITabBar.appearance().barTintColor = .black
     }
     
     var body: some View {
+        // Main NavigationView - Handles user navigation across multiple views
         NavigationView {
+            // TabView - Tab Navigation across multiple views
+            // Application comprise of five tabs - Movies, Theaters, News, Trailers, and User Profile
             TabView {
                 Movies().tabItem {
                     Image(systemName: "film.fill")

@@ -9,11 +9,16 @@ import Combine
 import Foundation
 import SwiftUI
 
-// Fetches an image from the network
+// Provide Image Services
+// Retrieve Image from the network
 class ImageService: ObservableObject {
+    // Image
     @Published var image: UIImage?
+    // URL
     private let url: String
+    // Subscription List
     private var subscription: AnyCancellable?
+    // Cache - Singleton
     private var imageCache = ImageCache.getImageCache()
     
     init(url: String) {
@@ -21,8 +26,9 @@ class ImageService: ObservableObject {
         load()
     }
     
+    // Retrieve Image
     private func load() {
-        // Check if an image exists in cache
+        // Check if an image already exists in cache
         if isImageCached() {
             return
         }
@@ -30,12 +36,16 @@ class ImageService: ObservableObject {
         loadImageFromURL()
     }
     
-    //
+    // Retrieves Image from Network (via URL)
     private func loadImageFromURL() {
+        // URLSession
         subscription = URLSession.shared
+            // Fetch from URL
             .dataTaskPublisher(for: URL(string: url)!)
+            // Resamples original image size to reduce resource usage (~10x)
             .map { self.downsampleImage(image: UIImage(data: $0.data)!, for: CGSize(width: 146, height: 204)) }
             .replaceError(with: nil)
+            // Adds the result to the cache to reduce network usage during application usage
             .handleEvents( receiveOutput:{
                 self.imageCache.set(forKey: self.url, image: $0!)
             })

@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Movie Model
+// Modeled after JSON data to be retrieved in network
 struct Movie : Decodable {
     var title: String
     var directors: String

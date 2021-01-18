@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+// Displays the Movie section view
+// Comprised of a header and list
 struct Movies: View {
     var body: some View {
         VStack {
+            // Header
             MoviesHeader()
+            // List
             MoviesList()
                 .padding(.vertical)
         }
