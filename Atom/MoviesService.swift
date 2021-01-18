@@ -44,3 +44,13 @@ class MoviesService: ObservableObject {
             .store(in: &cancellableSet)
     }
 }
+
+// Extension Function to MovieService
+extension MoviesService {
+    // Singleton
+    private static var moviesService = MoviesService()
+    // Return Singleton created
+    static func getMoviesService() -> MoviesService {
+        return moviesService
+    }
+}

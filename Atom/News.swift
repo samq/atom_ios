@@ -95,6 +95,9 @@ struct FeaturesCard: View {
 }
 
 struct Calendar: View {
+    // MovieService Object - Provides information about movies
+    @ObservedObject var moviesService = MoviesService.getMoviesService()
+    
     var body: some View {
         Text("Calendar")
     }
