@@ -218,8 +218,29 @@ struct CastCardView: View {
 // Add Your Own Review - Button
 // List - Icon / Name / Rating / Comment / Verified Review Mark`
 struct Reviews: View {
+    private let ATOM_BLUE = Color(red: 52/255.0, green: 152/255.0, blue: 219/255.0)
+    
     var body: some View {
-        Text("Reviews")
+        VStack {
+            HStack {
+                Text("User Reviews")
+                Spacer()
+            }
+            Divider()
+            Text("Looks like no one has reviewed this yet.")
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 64)
+                .border(Color.gray)
+            Button(action: {}) {
+                Text("Be the First to Leave a Review")
+                    .font(.subheadline)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            }
+            .padding(8)
+            .background(ATOM_BLUE)
+            .cornerRadius(8)
+        }
+        .padding()
     }
 }
 
