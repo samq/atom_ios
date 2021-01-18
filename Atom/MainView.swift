@@ -7,8 +7,13 @@
 
 import SwiftUI
 
+enum Tab {
+    case movies, theaters, news, trailers, profile
+}
+
 // MainView for Atom Application
 struct MainView: View {
+    @State private var currentTab: Tab = Tab.movies
     
     init() {
         // Adjust TabView color
@@ -16,34 +21,36 @@ struct MainView: View {
     }
     
     var body: some View {
-        // Main NavigationView - Handles user navigation across multiple views
-        NavigationView {
-            // TabView - Tab Navigation across multiple views
-            // Application comprise of five tabs - Movies, Theaters, News, Trailers, and User Profile
-            TabView {
-                Movies().tabItem {
-                    Image(systemName: "film.fill")
-                    Text("Movies")
-                }
-                .navigationBarHidden(true)
-                Theaters().tabItem {
-                    Image(systemName: "mappin.circle.fill")
-                    Text("Theaters")
-                }
-                News().tabItem {
-                    Image(systemName: "newspaper.fill")
-                    Text("News")
-                }
-                Trailers().tabItem {
-                    Image(systemName: "play.circle.fill")
-                    Text("Trailers")
-                }
-                Profile().tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Profile")
-                }
+        // TabView - Tab Navigation across multiple views
+        // Application comprise of five tabs - Movies, Theaters, News, Trailers, and User Profile
+        TabView(selection: $currentTab) {
+            Movies().tabItem {
+                Image(systemName: "film.fill")
+                Text("Movies")
             }
+            .tag(Tab.movies)
+            Theaters().tabItem {
+                Image(systemName: "mappin.circle.fill")
+                Text("Theaters")
+            }
+            .tag(Tab.theaters)
+            News().tabItem {
+                Image(systemName: "newspaper.fill")
+                Text("News")
+            }
+            .tag(Tab.news)
+            Trailers().tabItem {
+                Image(systemName: "play.circle.fill")
+                Text("Trailers")
+            }
+            .tag(Tab.trailers)
+            Profile().tabItem {
+                Image(systemName: "person.crop.circle.fill")
+                Text("Profile")
+            }
+            .tag(Tab.profile)
         }
+        
     }
 }
 

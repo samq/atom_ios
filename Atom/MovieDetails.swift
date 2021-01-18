@@ -21,12 +21,23 @@ struct MovieDetails: View {
     init(movie: Movie) {
         self.movie = movie
         
+        // NavigationBar - Background Color
+        UINavigationBar.appearance().barTintColor = .black
+        
         // Customizes Picker (SegmentedPickerStyle)
         // Background Color / Selected Color / Foreground (Normal and Selected)
         UISegmentedControl.appearance().backgroundColor = .black
         UISegmentedControl.appearance().selectedSegmentTintColor = .black
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: ATOM_BLUE], for: .selected)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .normal)
+    }
+    
+    private var shareButton = Button(action:{}) {
+        Image(systemName: "square.and.arrow.up")
+    }
+    
+    private var bookmarkButton = Button(action:{}) {
+        Image(systemName: "bookmark")
     }
     
     var body: some View {
@@ -62,6 +73,16 @@ struct MovieDetails: View {
                 }
             }
         }
+        // Remove Navigation Bar Title
+        .navigationBarTitleDisplayMode(.inline)
+        // Add Share and Bookmark Button to NavigationBar
+        .navigationBarItems(
+            trailing: HStack{
+                shareButton.padding()
+                bookmarkButton
+            }
+            .foregroundColor(.gray)
+        )
         // Black Background with White Fonts
         .background(Color.black)
         .foregroundColor(Color.white)

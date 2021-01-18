@@ -11,16 +11,20 @@ import SwiftUI
 // Comprised of a header and list
 struct Movies: View {
     var body: some View {
-        VStack {
-            // Header
-            MoviesHeader()
-            // List
-            MoviesList()
-                .padding(.vertical)
+        NavigationView {
+            VStack {
+                // Header
+                MoviesHeader()
+                // List
+                MoviesList()
+                    .padding(.vertical)
+            }
+            .navigationBarHidden(true)
+            .padding()
+            .background(Color.black)
+            .foregroundColor(Color.white)
         }
-        .padding()
-        .background(Color.black)
-        .foregroundColor(Color.white)
+        .accentColor(.gray)
     }
 }
 
