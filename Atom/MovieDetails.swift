@@ -8,10 +8,134 @@
 import SwiftUI
 
 struct MovieDetails: View {
-    @State var movie: Movie
+    @State private var selectedSection = 0
+    
+    var movie: Movie
+    var sections = ["Showtimes", "Details", "Reviews"]
+    
+    private let ATOM_BLUE = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1)
+    
+    init(movie: Movie) {
+        self.movie = movie
+        UISegmentedControl.appearance().backgroundColor = .black
+        UISegmentedControl.appearance().selectedSegmentTintColor = .black
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: ATOM_BLUE], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .normal)
+    }
     
     var body: some View {
-        Text("\(movie.title)")
+        ScrollView {
+            // NavigationView
+            // Back Arrow
+            // Movie Poster / Movie Title
+            // Share
+            // Bookmark
+            
+            // Trailer - Video
+            // Scrolling Effect
+            
+            // Movie Poster
+            // Movie Title, Rating, Runtime
+            HStack {
+                RemoteImage(url: movie.poster_full)
+                    .frame(width: 146, height: 204)
+                VStack(alignment: .leading) {
+                    Text("\(movie.title)")
+                    Text("\(movie.mpa_rating)")
+                }
+                Spacer()
+            }
+            .padding()
+            
+            // Tabs - Showtimes / Details / Reviews
+            Picker("", selection: $selectedSection) {
+                ForEach(0 ..< sections.count) {
+                    Text("\(sections[$0])")
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
+            // Show section that corresponds to one chosen in Picker
+            Group {
+                switch(sections[selectedSection]) {
+                    case "Showtimes": Showtimes()
+                    case "Details": Details()
+                    default: Reviews()
+                }
+            }
+        }
+        .background(Color.black)
+        .foregroundColor(Color.white)
+    }
+}
+
+// Showtimes
+// Date and Location
+// Format
+// Movie Theater Name / Favorite
+// Distance (Miles) / Theater Details - Name / Favorite / Distance / Address / Listings
+// Add to Watch List
+struct Showtimes: View {
+    @State private var date = "Today"
+    @State private var location = "Los Angeles"
+    @State private var format = "All Format"
+    
+    private let CALENDAR_IMAGE_NAME = "calendar"
+    private let LOCATION_IMAGE_NAME = "location"
+    private let FILM_IMAGE_NAME = "film"
+    
+    private let ATOM_BLUE = Color(red: 52/255.0, green: 152/255.0, blue: 219/255.0)
+    
+    var body: some View {
+        VStack {
+            HStack {
+                //
+                ImageButton(text: date, imageName: CALENDAR_IMAGE_NAME)
+                    .frame(maxWidth: .infinity)
+                //
+                ImageButton(text: location, imageName: LOCATION_IMAGE_NAME)
+                    .frame(maxWidth: .infinity)
+            }
+            //
+            ImageButton(text: format, imageName: FILM_IMAGE_NAME)
+                .frame(maxWidth: .infinity)
+            
+            Button(action: {}) {
+                Text("Add to My Watch List")
+                    .font(.subheadline)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(8)
+            .background(ATOM_BLUE)
+            .cornerRadius(8)
+        }
+        .padding()
+    }
+}
+
+// Details
+// Synopsis
+// Cast - Photo (Placeholder) and Name
+// View All (List)
+// Videos and Photos
+// Details - Release Date / Director / Producers / Writer / Runtime
+struct Details: View {
+    var body: some View {
+        Text("Details")
+    }
+}
+
+// Reviews
+// Critic Reviews
+// User Reviews
+// 5 / 4 / 3 / 2 / 1 Stars
+// Add Your Own Review - Button
+// List - Icon / Name / Rating / Comment / Verified Review Mark`
+struct Reviews: View {
+    var body: some View {
+        Text("Reviews")
     }
 }
 

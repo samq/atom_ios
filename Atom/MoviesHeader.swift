@@ -17,9 +17,9 @@ struct MoviesHeader: View {
     var body : some View {
         HStack {
             Image(systemName: "list.bullet")
-            SearchButton(text: movie, imageName: SEARCH_IMAGE_NAME)
+            ImageButton(text: movie, imageName: SEARCH_IMAGE_NAME)
                 .frame(maxWidth: .infinity)
-            SearchButton(text: location, imageName: LOCATION_IMAGE_NAME)
+            ImageButton(text: location, imageName: LOCATION_IMAGE_NAME)
                 .frame(maxWidth: .infinity)
         }
     }

@@ -16,7 +16,7 @@
 		AC84EDAE25AD52E800230761 /* MoviesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDAD25AD52E800230761 /* MoviesHeader.swift */; };
 		AC84EDB325AD531E00230761 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDB225AD531E00230761 /* MoviesList.swift */; };
 		AC84EDB825AD535E00230761 /* MoviesListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDB725AD535E00230761 /* MoviesListItem.swift */; };
-		AC84EDCA25AD558000230761 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDC925AD558000230761 /* SearchButton.swift */; };
+		AC84EDCA25AD558000230761 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84EDC925AD558000230761 /* ImageButton.swift */; };
 		AC84EDD925AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDD625AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf */; };
 		AC84EDDA25AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDD725AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf */; };
 		AC84EDDB25AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC84EDD825AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf */; };
@@ -67,7 +67,7 @@
 		AC84EDAD25AD52E800230761 /* MoviesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesHeader.swift; sourceTree = "<group>"; };
 		AC84EDB225AD531E00230761 /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
 		AC84EDB725AD535E00230761 /* MoviesListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListItem.swift; sourceTree = "<group>"; };
-		AC84EDC925AD558000230761 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		AC84EDC925AD558000230761 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		AC84EDD625AD628D00230761 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		AC84EDD725AD628D00230761 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
 		AC84EDD825AD628D00230761 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 				AC84EDAD25AD52E800230761 /* MoviesHeader.swift */,
 				AC84EDB225AD531E00230761 /* MoviesList.swift */,
 				AC84EDB725AD535E00230761 /* MoviesListItem.swift */,
-				AC84EDC925AD558000230761 /* SearchButton.swift */,
+				AC84EDC925AD558000230761 /* ImageButton.swift */,
 			);
 			name = "Supporting Views";
 			sourceTree = "<group>";
@@ -438,7 +438,7 @@
 				ACF4B8F8259D01EA005AAB05 /* Trailers.swift in Sources */,
 				ACF4B8E4259D01B9005AAB05 /* Movies.swift in Sources */,
 				AC84EDB325AD531E00230761 /* MoviesList.swift in Sources */,
-				AC84EDCA25AD558000230761 /* SearchButton.swift in Sources */,
+				AC84EDCA25AD558000230761 /* ImageButton.swift in Sources */,
 				AC84EDB825AD535E00230761 /* MoviesListItem.swift in Sources */,
 				AC84EE3625AE9A0D00230761 /* ImageService.swift in Sources */,
 			);

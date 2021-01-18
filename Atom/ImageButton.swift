@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchButton: View {
+struct ImageButton: View {
     var text: String
     var imageName: String
     
