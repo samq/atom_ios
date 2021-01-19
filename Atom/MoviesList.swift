@@ -10,7 +10,7 @@ import SwiftUI
 // Creates a list of movie listings along with navigation to additional information about movie
 struct MoviesList: View {
     // MovieService Object - Provides information about movies
-    @ObservedObject var moviesService = MoviesService()
+    @ObservedObject var moviesService = MoviesService.getMoviesService()
     
     // Grid Information
     private var columns = [GridItem(.flexible()), GridItem(.flexible())]
