@@ -60,6 +60,7 @@
 		AC3FEC3A25B555EB00B1073B /* CastCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCardView.swift; sourceTree = "<group>"; };
 		AC3FEC3F25B5560300B1073B /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		AC3FEC4425B5561D00B1073B /* Showtimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Showtimes.swift; sourceTree = "<group>"; };
+		AC3FEC5925B6845A00B1073B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AC497B18259A9C5E00D4BF81 /* Atom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC497B1B259A9C5E00D4BF81 /* AtomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomApp.swift; sourceTree = "<group>"; };
 		AC497B1D259A9C5E00D4BF81 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		AC497B0F259A9C5E00D4BF81 = {
 			isa = PBXGroup;
 			children = (
+				AC3FEC5925B6845A00B1073B /* README.md */,
 				AC497B1A259A9C5E00D4BF81 /* Atom */,
 				AC497B2C259A9C5F00D4BF81 /* AtomTests */,
 				AC497B37259A9C5F00D4BF81 /* AtomUITests */,
