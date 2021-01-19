@@ -75,7 +75,7 @@ struct FeaturesCard: View {
             // Picture
             Image(systemName: "photo")
                 .resizable()
-                .frame(width: .infinity, height: 256)
+                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
             // Title
             Text("Lorem ipsum dolor sit amet")
                 .font(.system(size: 24))
@@ -98,8 +98,48 @@ struct Calendar: View {
     // MovieService Object - Provides information about movies
     @ObservedObject var moviesService = MoviesService.getMoviesService()
     
+    private var columns = [GridItem(.flexible())]
+    
     var body: some View {
-        Text("Calendar")
+        // Lazy Loading
+        LazyVGrid(columns: columns) {
+            // TODO: Sort by Date
+            ForEach(Array(moviesService.movies_by_dates.keys), id: \.self) { key in
+                // TODO: Formatting Dates
+                CalendarRow(
+                    date: key,
+                    movies: moviesService.movies_by_dates[key]!
+                )
+            }
+        }
+        .padding()
+    }
+}
+
+// Displays the rows in Calendar view
+// Comprise of the Release Date followed by Movie Poster(s)
+struct CalendarRow: View {
+    private var date: String
+    private var movies: [Movie]
+    
+    init(date: String, movies: [Movie]) {
+        self.date = date
+        self.movies = movies
+    }
+    
+    var body: some View {
+        HStack {
+            // Date
+            Text("\(date)")
+            // Movies List
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(movies, id: \.title) { movie in
+                        RemoteImage(url: movie.poster_full)
+                    }
+                }
+            }
+        }
     }
 }
 
